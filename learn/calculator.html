@@ -1,75 +1,75 @@
-<HEAD>
-        <TITLE> Simple Calculation</TITLE>
+<head>
+        <title> Simple Calculation</title>
     
-    </HEAD>
+    </head>
     
-    <BODY>
-        <FORM NAME="myForm">
-            <TABLE BORDER=2>
-                <TR>
-                    <TD align="center">
-                        <INPUT TYPE="text" ID="screen" NAME="screen" style="width:99%"><br>
-                    </TD>
-                </TR>
-                <TR>
-                    <TD>
-                        <INPUT TYPE="button" NAME="7" VALUE="  7  " onclick="update(7)">
-                        <INPUT TYPE="button" NAME="8" VALUE="  8  " onclick="update(8)">
-                        <INPUT TYPE="button" NAME="9" VALUE="  9  " onclick="update(9)">
-                        <INPUT TYPE="button" NAME="+" VALUE="  +  " onclick="update('+')">
+    <body>
+        <form name="myform">
+            <table border=2>
+                <tr>
+                    <td align="center">
+                        <input type="text" id="screen" name="screen" style="width:99%"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" name="7" value="  7  " onclick="update(7)">
+                        <input type="button" name="8" value="  8  " onclick="update(8)">
+                        <input type="button" name="9" value="  9  " onclick="update(9)">
+                        <input type="button" name="+" value="  +  " onclick="update('+')">
                         <br>
-                        <INPUT TYPE="button" NAME="4" VALUE="  4  " onclick="update(4)">
-                        <INPUT TYPE="button" NAME="5" VALUE="  5  " onclick="update(5)">
-                        <INPUT TYPE="button" NAME="6" VALUE="  6  " onclick="update(6)">
-                        <INPUT TYPE="button" NAME="-" VALUE="  -  " onclick="update('-')">
+                        <input type="button" name="4" value="  4  " onclick="update(4)">
+                        <input type="button" name="5" value="  5  " onclick="update(5)">
+                        <input type="button" name="6" value="  6  " onclick="update(6)">
+                        <input type="button" name="-" value="  -  " onclick="update('-')">
                         <br>
-                        <INPUT TYPE="button" NAME="1" VALUE="  1  " onclick="update(1)">
-                        <INPUT TYPE="button" NAME="2" VALUE="  2  " onclick="update(2)">
-                        <INPUT TYPE="button" NAME="3" VALUE="  3  " onclick="update(3)">
-                        <INPUT TYPE="button" NAME="*" VALUE="  x  " onclick="update('*')">
+                        <input type="button" name="1" value="  1  " onclick="update(1)">
+                        <input type="button" name="2" value="  2  " onclick="update(2)">
+                        <input type="button" name="3" value="  3  " onclick="update(3)">
+                        <input type="button" name="*" value="  x  " onclick="update('*')">
                         <br>
-                        <INPUT TYPE="button" NAME="c" VALUE="  c  " onclick="form_reset();">
-                        <INPUT TYPE="button" NAME="0" VALUE="  0  " onclick="update(0)">
-                        <INPUT TYPE="button" NAME="=" VALUE="  =  " onclick="result();">
-                        <INPUT TYPE="button" NAME="/" VALUE="  /  " onclick="update('/')">
-                    </TD>
-                </TR>
-            </TABLE>
-        </FORM>
+                        <input type="button" name="c" value="  c  " onclick="form_reset();">
+                        <input type="button" name="0" value="  0  " onclick="update(0)">
+                        <input type="button" name="=" value="  =  " onclick="result();">
+                        <input type="button" name="/" value="  /  " onclick="update('/')">
+                    </td>
+                </tr>
+            </table>
+        </form>
         <script>
             function update(value) {
-                document.getElementById("screen").value += value;
+                document.getelementbyid("screen").value += value;
             }
 
             function result() {
-                var field = document.getElementById("screen").value; 
+                var field = document.getelementbyid("screen").value; 
                 if(field.includes("+")){
-                    var posOper = field.indexOf("+");
-                    var firstNum = field.substring(0,posOper);
-                    var lastNum = field.substring(posOper+1, field.lenght);
+                    var posoper = field.indexof("+");
+                    var firstnum = field.substring(0,posoper);
+                    var lastnum = field.substring(posoper+1, field.lenght);
 
-                    document.getElementById("screen").value = Number(firstNum) + Number(lastNum);    
+                    document.getelementbyid("screen").value = number(firstnum) + number(lastnum);    
 
                 } else if(field.includes("-")){
-                    var posOper = field.indexOf("-");
-                    var firstNum = field.substring(0,posOper);
-                    var lastNum = field.substring(posOper+1, field.lenght);
+                    var posoper = field.indexof("-");
+                    var firstnum = field.substring(0,posoper);
+                    var lastnum = field.substring(posoper+1, field.lenght);
 
-                    document.getElementById("screen").value = Number(firstNum) - Number(lastNum);    
+                    document.getelementbyid("screen").value = number(firstnum) - number(lastnum);    
 
                 } else if(field.includes("*")){
-                    var posOper = field.indexOf("*");
-                    var firstNum = field.substring(0,posOper);
-                    var lastNum = field.substring(posOper+1, field.lenght);
+                    var posoper = field.indexof("*");
+                    var firstnum = field.substring(0,posoper);
+                    var lastnum = field.substring(posoper+1, field.lenght);
 
-                    document.getElementById("screen").value = Number(firstNum) * Number(lastNum);    
+                    document.getelementbyid("screen").value = number(firstnum) * number(lastnum);    
 
                 } else if(field.includes("/")){
-                    var posOper = field.indexOf("/");
-                    var firstNum = field.substring(0,posOper);
-                    var lastNum = field.substring(posOper+1, field.lenght);
+                    var posoper = field.indexof("/");
+                    var firstnum = field.substring(0,posoper);
+                    var lastnum = field.substring(posoper+1, field.lenght);
 
-                    document.getElementById("screen").value = Number(firstNum) / Number(lastNum);    
+                    document.getelementbyid("screen").value = number(firstnum) / number(lastnum);    
 
                 }                
 
@@ -77,11 +77,11 @@
             }
 
             function form_reset() {
-                document.getElementById("screen").value = "";
+                document.getelementbyid("screen").value = "";
             }
         
-        </SCRIPT>
-    </BODY>
+        </script>
+    </body>
     
-    </HTML>
+    </html>
     
