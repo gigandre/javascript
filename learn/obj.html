@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>criação de objetos</title>
+</head>
+<body>
+    <script>
+
+        window.addEventListener("load", function(event){
+            var myObj = new Object();
+            myObj.tamanho = 'grande';
+            myObj.numero = 50;
+            
+            console.log(myObj);
+
+
+            var objEu = {nome:'andre', idade:35, endereco:{rua:'fagundes pai', numero:1594} };
+            objEu.complemento = '91B'
+
+            console.log(objEu);
+
+            var myArray = ["andre", "eduardo", "oliveira"];
+            myArray[3] = "teste";
+            myArray[5] = "teste2";
+
+            var testArray = new Array();
+            testArray[0] = 555;
+
+            var newTestArray = [];
+
+            console.log(myArray);            
+            console.log(testArray);
+            console.log(newTestArray);
+            
+
+
+        });
+
+    </script>
+</body>    
+</html>
